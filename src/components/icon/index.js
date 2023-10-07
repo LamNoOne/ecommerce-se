@@ -7,6 +7,9 @@ import TwitterIcon from "./TwitterIcon"
 import WishlistIcon from "./WishlistIcon"
 import SendIcon from "./SendIcon"
 import CopyrightIcon from "./CopyrightIcon"
+import HeartIcon from "./HeartIcon"
+import ViewIcon from "./ViewIcon"
+import CircleIcon from "./CircleIcon"
 
 export {
     CartIcon,
@@ -18,4 +21,7 @@ export {
     WishlistIcon,
     SendIcon,
     CopyrightIcon,
+    HeartIcon,
+    ViewIcon,
+    CircleIcon,
 }

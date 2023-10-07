@@ -34,6 +34,7 @@
     --secondary-color-semi-blur-blue: #a0bce0;
     --button-other-color-green: #00ff66;
     --menu-underline-active: #db4444;
+    --border-color-normal: rgba(0,0,0,0.5);
 }
 
 .search-form-header {
@@ -61,7 +62,7 @@
 }
 
 .header-menu__link {
-    position: relative; 
+    position: relative;
 }
 
 .header-menu__link::before {
@@ -94,4 +95,30 @@
     top: 0;
     height: 100%;
     border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--menu-underline-active) !important;
+    opacity: 1 !important;
 }

@@ -4,6 +4,8 @@ import Category from "./category"
 import Container from "./container"
 import FooterComponent from "./footerComponent"
 import Advertisement from "./advertisement"
+import Button from "./button"
+import CardProduct from "./cardProduct"
 
 export {
     HeaderComponent,
@@ -11,5 +13,7 @@ export {
     Container,
     FooterComponent,
     Category,
-    Advertisement
+    Advertisement,
+    Button,
+    CardProduct
 }

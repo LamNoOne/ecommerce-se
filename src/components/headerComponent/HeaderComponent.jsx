@@ -20,7 +20,7 @@ const HeaderComponent = (props) => {
                     </Link>
                 </div>
             </div>
-            <div className="xl:max-w-[1280px] w-full h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4">
+            <div className={`${style.boxWidth} h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4`}>
                 <div className="exclusive text-black font-['Inter'] text-2xl font-bold leading-6 me-[190px]">
                     Exclusive
                 </div>
