@@ -1,15 +1,16 @@
-import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
-import styles from './Button.module.css';
+import PropTypes from "prop-types"
+import classNames from "classnames/bind"
+import { Link } from "react-router-dom"
+import styles from "./Button.module.css"
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
-function Button({
+const Button = ({
     to,
     href,
     primary = false,
     secondary = false,
+    third = false,
     outline = false,
     text = false,
     rounded = false,
@@ -22,49 +23,50 @@ function Button({
     rightIcon,
     onClick,
     ...passProps
-}) {
-    let Comp = 'button';
+}) => {
+    let Comp = "button"
     const props = {
         onClick,
         ...passProps,
-    };
+    }
 
     // Remove event listener when btn is disabled
     if (disabled) {
         Object.keys(props).forEach((key) => {
-            if (key.startsWith('on') && typeof props[key] === 'function') {
-                delete props[key];
+            if (key.startsWith("on") && typeof props[key] === "function") {
+                delete props[key]
             }
-        });
+        })
     }
 
     if (to) {
-        props.to = to;
-        Comp = Link;
+        props.to = to
+        Comp = Link
     } else if (href) {
-        props.href = href;
-        Comp = 'a';
+        props.href = href
+        Comp = "a"
     }
 
-    const classes = cx('wrapper', {
+    const classes = cx("wrapper", {
         [className]: className,
         primary,
         secondary,
+        third,
         outline,
         text,
         disabled,
         rounded,
         small,
         large,
-    });
+    })
 
     return (
         <Comp className={classes} {...props}>
-            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
-            <span className={cx('title')}>{children}</span>
-            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+            {leftIcon && <span className={cx("icon")}>{leftIcon}</span>}
+            <span className={cx("title")}>{children}</span>
+            {rightIcon && <span className={cx("icon")}>{rightIcon}</span>}
         </Comp>
-    );
+    )
 }
 
 Button.propTypes = {
@@ -82,6 +84,6 @@ Button.propTypes = {
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     onClick: PropTypes.func,
-};
+}
 
-export default Button;
+export default Button

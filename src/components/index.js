@@ -6,6 +6,8 @@ import FooterComponent from "./footerComponent"
 import Advertisement from "./advertisement"
 import Button from "./button"
 import CardProduct from "./cardProduct"
+import NavigationSlide from "./navigationSlide"
+import CategoryButton from "./categoryButton"
 
 export {
     HeaderComponent,
@@ -15,5 +17,7 @@ export {
     Category,
     Advertisement,
     Button,
-    CardProduct
+    CardProduct,
+    NavigationSlide,
+    CategoryButton
 }

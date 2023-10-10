@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Home } from "./pages"
+import Home from "./pages/home"
 import DefaultLayout from "~/layout/defaultLayout"
 
 const App = () => {

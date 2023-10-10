@@ -9,7 +9,14 @@ import SendIcon from "./SendIcon"
 import CopyrightIcon from "./CopyrightIcon"
 import HeartIcon from "./HeartIcon"
 import ViewIcon from "./ViewIcon"
-import CircleIcon from "./CircleIcon"
+import PrevBtn from "./PrevBtn"
+import NextBtn from "./NextBtn"
+import CameraIcon from "./CameraIcon"
+import ComputerIcon from "./ComputerIcon"
+import EllipseIcon from "./EllipseIcon"
+import GamingIcon from "./GamingIcon"
+import HeadPhoneIcon from "./HeadPhoneIcon"
+import PhoneIcon from "./PhoneIcon"
 
 export {
     CartIcon,
@@ -23,5 +30,12 @@ export {
     CopyrightIcon,
     HeartIcon,
     ViewIcon,
-    CircleIcon,
+    PrevBtn,
+    NextBtn,
+    CameraIcon,
+    ComputerIcon,
+    EllipseIcon,
+    GamingIcon,
+    HeadPhoneIcon,
+    PhoneIcon,
 }

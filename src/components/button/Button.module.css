@@ -68,6 +68,16 @@
     opacity: 0.9;
 }
 
+.third {
+    color: #FAFAFA;
+    background-color: #0F6;
+    border-color: #0F6;
+}
+
+.third:hover {
+    opacity: 0.9;
+}
+
 .outline {
     color: var(--primary);
     border-color: currentColor;
@@ -88,6 +98,6 @@
 }
 
 .large {
-    padding: 16x 48px;
+    padding: 16px 48px;
     min-width: 140px;
 }

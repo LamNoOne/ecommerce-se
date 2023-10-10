@@ -122,3 +122,7 @@
     background-color: var(--menu-underline-active) !important;
     opacity: 1 !important;
 }
+
+.swiper-custom {
+    position: relative !important;
+}
