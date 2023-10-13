@@ -68,6 +68,9 @@ const Home = () => {
                     buttonBottom
                 />
             </section>
+            <section className="mt-32">
+                <feature />
+            </section>
         </>
     )
 }
