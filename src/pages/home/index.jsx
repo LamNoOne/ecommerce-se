@@ -14,6 +14,7 @@ import { categoryBrowse } from "~/components/variables/categoryBrowse"
 import CategoryList from "./components/categoryList"
 import CategorySlide from "./components/categorySlide"
 import Event from "./components/event"
+import Feature from "./components/feature"
 import Timer from "./components/timer"
 import { products } from "./components/variables/data"
 
@@ -69,7 +70,7 @@ const Home = () => {
                 />
             </section>
             <section className="mt-32">
-                <feature />
+                <Feature />
             </section>
         </>
     )

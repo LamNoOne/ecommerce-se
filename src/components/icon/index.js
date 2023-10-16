@@ -1,41 +1,30 @@
-import CartIcon from "./CartIcon"
-import FacebookIcon from "./FacebookIcon"
-import InstagramIcon from "./InstagramIcon"
-import LinkedIcon from "./LinkedIcon"
-import SearchIcon from "./SearchIcon"
-import TwitterIcon from "./TwitterIcon"
-import WishlistIcon from "./WishlistIcon"
-import SendIcon from "./SendIcon"
-import CopyrightIcon from "./CopyrightIcon"
-import HeartIcon from "./HeartIcon"
-import ViewIcon from "./ViewIcon"
-import PrevBtn from "./PrevBtn"
-import NextBtn from "./NextBtn"
 import CameraIcon from "./CameraIcon"
+import CartIcon from "./CartIcon"
 import ComputerIcon from "./ComputerIcon"
+import CopyrightIcon from "./CopyrightIcon"
+import CustomerServiceIcon from "./CustomerServiceIcon"
+import DeliveryServiceIcon from "./DeliveryServiceIcon"
 import EllipseIcon from "./EllipseIcon"
+import FacebookIcon from "./FacebookIcon"
 import GamingIcon from "./GamingIcon"
 import HeadPhoneIcon from "./HeadPhoneIcon"
+import HeartIcon from "./HeartIcon"
+import InstagramIcon from "./InstagramIcon"
+import LinkedIcon from "./LinkedIcon"
+import NextBtn from "./NextBtn"
 import PhoneIcon from "./PhoneIcon"
+import PrevBtn from "./PrevBtn"
+import SearchIcon from "./SearchIcon"
+import SendIcon from "./SendIcon"
+import SercureIcon from "./SercureIcon"
+import TwitterIcon from "./TwitterIcon"
+import ViewIcon from "./ViewIcon"
+import WishlistIcon from "./WishlistIcon"
 
 export {
-    CartIcon,
-    FacebookIcon,
-    InstagramIcon,
-    LinkedIcon,
-    SearchIcon,
-    TwitterIcon,
-    WishlistIcon,
-    SendIcon,
-    CopyrightIcon,
-    HeartIcon,
-    ViewIcon,
-    PrevBtn,
-    NextBtn,
-    CameraIcon,
-    ComputerIcon,
-    EllipseIcon,
-    GamingIcon,
-    HeadPhoneIcon,
-    PhoneIcon,
+    CameraIcon, CartIcon, ComputerIcon, CopyrightIcon, CustomerServiceIcon,
+    DeliveryServiceIcon, EllipseIcon, FacebookIcon, GamingIcon,
+    HeadPhoneIcon, HeartIcon, InstagramIcon,
+    LinkedIcon, NextBtn, PhoneIcon, PrevBtn, SearchIcon, SendIcon, SercureIcon, TwitterIcon, ViewIcon, WishlistIcon
 }
+

@@ -1,6 +1,5 @@
-import React from "react"
-import { Container, HeaderComponent, FooterComponent } from "~/components"
 import { Outlet } from "react-router-dom"
+import { Container, FooterComponent, HeaderComponent } from "~/components"
 
 const DefaultLayout = () => {
     return (
@@ -12,7 +11,6 @@ const DefaultLayout = () => {
             />
             <Container>
                 <Outlet />
-                <div className="h-[500px]"></div>
             </Container>
             <FooterComponent />
         </section>

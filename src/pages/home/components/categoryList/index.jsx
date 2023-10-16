@@ -29,13 +29,13 @@ const CategoryList = (props) => {
                     </div>
                 )}
             </div>
-            <div className="grid grid-cols-4 gap-x-4 gap-y-12">
+            <div className="grid grid-cols-4 gap-x-[30px] gap-y-12">
                 {items.map((item, index) => (
                     <CardProduct key={index} {...item} />
                 ))}
             </div>
             {buttonBottom && (
-                <div className="flex justify-center items-center mb-[60px]">
+                <div className="flex justify-center items-center mb-[60px] mt-[60px]">
                     <Button primary large>
                         View All Products
                     </Button>
