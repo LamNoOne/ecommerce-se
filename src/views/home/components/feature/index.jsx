@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import images from "~/assets/images"
-import { service as Service } from "~/components"
+import { Service } from "~/components"
 import CategoryRectangle from "~/components/icon/CategoryRectangle"
 
 const Feature = (props) => {
-    const { items } = props
+    // const { items } = props
 
     return (
         <div className="product-list relative">

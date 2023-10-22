@@ -1,18 +1,17 @@
 import { Outlet } from "react-router-dom"
-import { Container, FooterComponent, HeaderComponent } from "~/components"
+import { Container, Footer, Header } from "~/components"
+
+const title =
+    "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!"
 
 const DefaultLayout = () => {
     return (
-        <section className="w-full h-full pt-[142px]">
-            <HeaderComponent
-                title={
-                    "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!"
-                }
-            />
+        <section className={`w-full h-full ${title ? 'pt-[142px]': 'pt-[94px]'}`}>
+            <Header title={title} />
             <Container>
                 <Outlet />
             </Container>
-            <FooterComponent />
+            <Footer />
         </section>
     )
 }

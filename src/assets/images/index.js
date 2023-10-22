@@ -6,6 +6,7 @@ const images = {
     gucci: require('./gucci.png'),
     speaker: require('./speaker.png'),
     wm_collection: require('./wm-collection.jpg'),
+    shop_auth: require('./shop_auth.jpg'),
     noImage: require('./no-image.png'),
 };
 

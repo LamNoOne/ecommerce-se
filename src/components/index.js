@@ -4,16 +4,23 @@ import CardProduct from "./cardProduct"
 import Category from "./category"
 import CategoryButton from "./categoryButton"
 import Container from "./container"
-import FooterComponent from "./footerComponent"
-import HeaderComponent from "./headerComponent"
+import Footer from "./footer"
+import Header from "./header"
 import Line from "./line"
 import NavigationSlide from "./navigationSlide"
-import service from "./service"
+import Service from "./service"
 
 export {
     Advertisement,
     Button,
-    CardProduct, Category, CategoryButton, Container,
-    FooterComponent, HeaderComponent,
-    Line, NavigationSlide, service
+    CardProduct,
+    Category,
+    CategoryButton,
+    Container,
+    Footer,
+    Header,
+    Line,
+    NavigationSlide,
+    Service
 }
+

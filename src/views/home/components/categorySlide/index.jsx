@@ -10,7 +10,7 @@ import { NextBtn, PrevBtn } from "~/components/icon"
 import CategoryRectangle from "~/components/icon/CategoryRectangle"
 import style from "~/style"
 
-const CategorySilde = (props) => {
+const CategorySlide = (props) => {
     const {
         CategoryModule,
         Line,
@@ -20,7 +20,6 @@ const CategorySilde = (props) => {
         titleCategory,
         titleEvent,
         numberOfCard,
-        grid = false,
     } = props
     const refPrev = useRef()
     const refNext = useRef()
@@ -99,7 +98,7 @@ const CategorySilde = (props) => {
     )
 }
 
-CategorySilde.propsType = {
+CategorySlide.propsType = {
     CategoryModule: PropsType.element.isRequired,
     Line: PropsType.element,
     Button: PropsType.element,
@@ -109,4 +108,4 @@ CategorySilde.propsType = {
     titleEvent: PropsType.string.isRequired,
 }
 
-export default CategorySilde
+export default CategorySlide

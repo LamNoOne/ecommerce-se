@@ -14,7 +14,7 @@ const EventTimer = ({ month, day, year }) => {
                 Minutes: minutes,
                 Seconds: seconds,
             }).map(([label, value]) => (
-                <div className="w-[62px] h-[62px] rounded-full bg-white flex flex-col justify-center items-center">
+                <div key={label} className="w-[62px] h-[62px] rounded-full bg-white flex flex-col justify-center items-center">
                     <p className="text-base leading-[20px] font-semibold font-[Poppins] text-black -mb-1">
                         {`${value}`.padStart(2, "0")}
                     </p>

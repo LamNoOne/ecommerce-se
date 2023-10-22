@@ -6,30 +6,33 @@ import {
     CategoryButton,
     Line,
 } from "~/components"
-import { advertisement } from "~/components/variables/advertisement"
-import { category } from "~/components/variables/category"
+
+import { advertisement, category, categoryBrowse } from "~/components/variables"
+
 import style from "~/style"
-// Get data
-import { categoryBrowse } from "~/components/variables/categoryBrowse"
-import CategoryList from "./components/categoryList"
-import CategorySlide from "./components/categorySlide"
-import Event from "./components/event"
-import Feature from "./components/feature"
-import Timer from "./components/timer"
+import {
+    CategoryList,
+    CategorySlide,
+    Event,
+    Feature,
+    Timer,
+} from "./components"
 import { products } from "./components/variables/data"
 
 const Home = () => {
     return (
-        <>
-            <section className="top-home flex pt-10">
-                <div className="flex-1 category-menu">
-                    <Category category={category} />
-                </div>
-                <div className={`ms-[56px] ${style.advertisememtStyle}`}>
-                    <Advertisement advertisement={advertisement} />
+        <div className="flex flex-col gap-16">
+            <section>
+                <div className="top-home flex pt-10">
+                    <div className="flex-1 category-menu">
+                        <Category category={category} />
+                    </div>
+                    <div className={`ms-[56px] ${style.advertisememtStyle}`}>
+                        <Advertisement advertisement={advertisement} />
+                    </div>
                 </div>
             </section>
-            <section className="mt-[60px]">
+            <section>
                 <CategorySlide
                     CategoryModule={CardProduct}
                     Line={Line}
@@ -41,7 +44,7 @@ const Home = () => {
                     numberOfCard={4}
                 />
             </section>
-            <section className="mt-[60px]">
+            <section>
                 <CategorySlide
                     CategoryModule={CategoryButton}
                     Line={Line}
@@ -51,17 +54,17 @@ const Home = () => {
                     numberOfCard={6}
                 />
             </section>
-            <section className="mt-[60px]">
+            <section>
                 <CategoryList
                     items={products}
                     titleCategory="This Month"
                     titleEvent="Best Sellings Products"
                 />
             </section>
-            <section className="mt-32">
+            <section>
                 <Event />
             </section>
-            <section className="mt-32">
+            <section>
                 <CategoryList
                     items={products}
                     titleCategory="Our Products"
@@ -69,10 +72,10 @@ const Home = () => {
                     buttonBottom
                 />
             </section>
-            <section className="mt-32">
+            <section>
                 <Feature />
             </section>
-        </>
+        </div>
     )
 }
 

@@ -1,13 +1,13 @@
+import { BsTabletLandscape } from "react-icons/bs"
+import { GrShieldSecurity } from "react-icons/gr"
+import { TbDeviceWatchStats } from "react-icons/tb"
 import {
     CameraIcon,
     ComputerIcon,
-    PhoneIcon,
-    HeadPhoneIcon,
     GamingIcon,
+    HeadPhoneIcon,
+    PhoneIcon,
 } from "~/components/icon"
-import { TbDeviceWatchStats } from "react-icons/tb"
-import { BsTabletLandscape } from "react-icons/bs"
-import { GrShieldSecurity } from "react-icons/gr"
 
 export const categoryBrowse = [
     { _id: "1", title: "Phones", image: <PhoneIcon /> , active: false },

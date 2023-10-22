@@ -1,7 +1,7 @@
 import { CustomerServiceIcon, DeliveryServiceIcon, SercureIcon } from "../icon"
 import SingleService from "./SingleService"
 
-const service = () => {
+const Service = () => {
     return (
         <div className="flex mx-auto gap-[88px] my-32">
             <SingleService
@@ -23,4 +23,4 @@ const service = () => {
     )
 }
 
-export default service
+export default Service

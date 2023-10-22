@@ -1,26 +1,30 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import { Line } from "~/components"
+import { CartIcon, SearchIcon, WishlistIcon } from "~/components/icon"
 import style from "~/style"
-import { SearchIcon, CartIcon, WishlistIcon } from "~/components/icon"
+import UserIcon from "../icon/UserIcon"
 
-const HeaderComponent = (props) => {
+const Header = (props) => {
     const { title } = props
     return (
-        <section className="fixed w-[100%] top-0 h-[142px] bg-slate-100 z-[9999]">
-            <div className="flex h-[48px] w-[100%] top-0 justify-center items-center bg-top-header">
-                <div className="flex items-center justify-center">
-                    <h3 className="text-[color:var(--text-color-white)] text-xs not-italic font-normal leading-[21px] me-2">
-                        {title}
-                    </h3>
-                    <Link to="#">
-                        <span className="text-xs font-semibold text-[color:var(--text-color-white)] leading-6 underline">
-                            ShopNow
-                        </span>
-                    </Link>
+        <section className={`fixed w-[100%] top-0 ${title ? 'h-[142px]' : 'h-[94px]'} bg-slate-100 z-[9999]`}>
+            {title && (
+                <div className="flex h-[48px] w-[100%] top-0 justify-center items-center bg-top-header">
+                    <div className="flex items-center justify-center">
+                        <h3 className="text-[color:var(--text-color-white)] text-xs not-italic font-normal leading-[21px] me-2">
+                            {title}
+                        </h3>
+                        <Link to="#">
+                            <span className="text-xs font-semibold text-[color:var(--text-color-white)] leading-6 underline">
+                                ShopNow
+                            </span>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div className={`${style.boxWidth} h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4`}>
+            )}
+            <div
+                className={`${style.boxWidth} h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4`}
+            >
                 <div className="flex-1 exclusive text-black font-['Inter'] text-2xl font-bold leading-6">
                     Exclusive
                 </div>
@@ -33,8 +37,9 @@ const HeaderComponent = (props) => {
                         </li>
                         <li>
                             <Link className="flex-1 header-menu__link" to="/#">
-                                <span className="header-menu__item">Contact</span>
-                                
+                                <span className="header-menu__item">
+                                    Contact
+                                </span>
                             </Link>
                         </li>
                         <li>
@@ -43,8 +48,13 @@ const HeaderComponent = (props) => {
                             </Link>
                         </li>
                         <li>
-                            <Link className="flex-1 header-menu__link" to="/#">
-                                <span className="header-menu__item">Sign Up</span>
+                            <Link
+                                className="flex-1 header-menu__link"
+                                to="/signup"
+                            >
+                                <span className="header-menu__item">
+                                    Sign Up
+                                </span>
                             </Link>
                         </li>
                     </ul>
@@ -67,8 +77,11 @@ const HeaderComponent = (props) => {
                     <Link to="/#" className="ms-6 flex items-center">
                         <WishlistIcon />
                     </Link>
-                    <Link to="/#" className="ms-4 flex items-center">
+                    <Link to="/#" className="ms-6 flex items-center">
                         <CartIcon />
+                    </Link>
+                    <Link to="/#" className="ms-6 flex items-center">
+                        <UserIcon />
                     </Link>
                 </div>
             </div>
@@ -77,4 +90,4 @@ const HeaderComponent = (props) => {
     )
 }
 
-export default HeaderComponent
+export default Header
