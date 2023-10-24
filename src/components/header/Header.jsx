@@ -7,7 +7,11 @@ import UserIcon from "../icon/UserIcon"
 const Header = (props) => {
     const { title } = props
     return (
-        <section className={`fixed w-[100%] top-0 ${title ? 'h-[142px]' : 'h-[94px]'} bg-slate-100 z-[9999]`}>
+        <section
+            className={`fixed w-[100%] top-0 ${
+                title ? "h-[142px]" : "h-[94px]"
+            } bg-slate-100 z-[9999]`}
+        >
             {title && (
                 <div className="flex h-[48px] w-[100%] top-0 justify-center items-center bg-top-header">
                     <div className="flex items-center justify-center">
@@ -80,9 +84,11 @@ const Header = (props) => {
                     <Link to="/#" className="ms-6 flex items-center">
                         <CartIcon />
                     </Link>
-                    <Link to="/#" className="ms-6 flex items-center">
+                    {/* Check if user login or not, then, switch icon as well as its function */}
+                    <Link to="/login" className="ms-6 flex items-center">
                         <UserIcon />
                     </Link>
+                    {/* <div className="ms-6 mt-1"><AccountDropdown /></div> */}
                 </div>
             </div>
             <Line style={style.lineStyleMain} />
