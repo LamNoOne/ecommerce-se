@@ -29,7 +29,7 @@ const CategoryList = (props) => {
                     </div>
                 )}
             </div>
-            <div className="grid grid-cols-4 gap-x-[30px] gap-y-12">
+            <div className="grid grid-cols-5 gap-x-[10px] gap-y-[10px]">
                 {items.map((item, index) => (
                     <CardProduct key={index} {...item} />
                 ))}

@@ -1,5 +1,6 @@
 import { Menu, Transition } from "@headlessui/react"
 import { Fragment } from "react"
+import { Link } from 'react-router-dom'
 import LogoutIcon from "../icon/LogoutIcon"
 import OrderIcon from "../icon/OrderIcon"
 import ReviewIcon from "../icon/ReviewIcon"
@@ -32,8 +33,8 @@ export default function AccountDropdown() {
                     <div className="py-5">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to='/member'
                                     className={classNames(
                                         active
                                             ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
@@ -47,13 +48,13 @@ export default function AccountDropdown() {
                                         </div>
                                         <span>Account settings</span>
                                     </div>
-                                </a>
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to='/member/order'
                                     className={classNames(
                                         active
                                             ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
@@ -68,13 +69,13 @@ export default function AccountDropdown() {
                                         </div>
                                         <span>My Order</span>
                                     </div>
-                                </a>
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to='/member/support'
                                     className={classNames(
                                         active
                                             ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
@@ -84,9 +85,9 @@ export default function AccountDropdown() {
                                 >
                                     <div className="flex items-center">
                                         <div className="me-4 ms-0"><ReviewIcon /></div>
-                                        <span>My Reviews</span>
+                                        <span>Support</span>
                                     </div>
-                                </a>
+                                </Link>
                             )}
                         </Menu.Item>
 

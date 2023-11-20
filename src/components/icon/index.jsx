@@ -20,11 +20,34 @@ import SercureIcon from "./SercureIcon"
 import TwitterIcon from "./TwitterIcon"
 import ViewIcon from "./ViewIcon"
 import WishlistIcon from "./WishlistIcon"
+import DeleteIcon from "./DeleteIcon"
+import Return from "./Return"
+import Delivery from "./Delivery"
 
 export {
-    CameraIcon, CartIcon, ComputerIcon, CopyrightIcon, CustomerServiceIcon,
-    DeliveryServiceIcon, EllipseIcon, FacebookIcon, GamingIcon,
-    HeadPhoneIcon, HeartIcon, InstagramIcon,
-    LinkedIcon, NextBtn, PhoneIcon, PrevBtn, SearchIcon, SendIcon, SercureIcon, TwitterIcon, ViewIcon, WishlistIcon
+    CameraIcon,
+    CartIcon,
+    ComputerIcon,
+    CopyrightIcon,
+    CustomerServiceIcon,
+    DeliveryServiceIcon,
+    EllipseIcon,
+    FacebookIcon,
+    GamingIcon,
+    HeadPhoneIcon,
+    HeartIcon,
+    InstagramIcon,
+    DeleteIcon,
+    LinkedIcon,
+    NextBtn,
+    PhoneIcon,
+    PrevBtn,
+    SearchIcon,
+    SendIcon,
+    SercureIcon,
+    TwitterIcon,
+    ViewIcon,
+    WishlistIcon,
+    Return,
+    Delivery
 }
-

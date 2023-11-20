@@ -71,7 +71,7 @@ const CategorySlide = (props) => {
                 className="swipper-custom mb-[60px]"
                 slidesPerView={Number(numberOfCard)}
                 centeredSlides={false}
-                spaceBetween={30}
+                spaceBetween={10}
                 pagination={{
                     type: "fraction",
                 }}

@@ -57,6 +57,17 @@
     opacity: 0.9;
 }
 
+.black {
+    color: var(--text-color-white);
+    background-color: #000;
+    border-color: currentColor;
+}
+
+.black:hover {
+    border-color: currentColor;
+    opacity: 0.9;
+}
+
 .secondary {
     color: var(--text-black);
     background-color: white;
@@ -79,8 +90,8 @@
 }
 
 .outline {
-    color: var(--primary);
-    border-color: currentColor;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
 }
 
 .outline:hover {
@@ -97,7 +108,20 @@
     padding: 10px 48px;
 }
 
+.medium {
+    padding: 10px 48px;
+    min-width: 140px;
+}
+
 .large {
     padding: 16px 48px;
     min-width: 140px;
+}
+
+.full {
+    width: 100%;
+}
+
+.notRounded {
+    border-radius: 0;
 }

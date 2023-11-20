@@ -21,7 +21,7 @@ const signUpSchema = Yup.object().shape({
     //     .required("Phone number is required")
     //     .matches(/(84|0[3|5|7|8|9])+([0-9]{8})\b/g, "Invalid phone number"),
 
-    email: Yup.string().email().required("Email is required"),
+    email: Yup.string().email('Invalid email address').required("Email is required"),
 
     password: Yup.string()
         .required("Password is required")

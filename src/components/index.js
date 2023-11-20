@@ -9,6 +9,7 @@ import Header from "./header"
 import Line from "./line"
 import NavigationSlide from "./navigationSlide"
 import Service from "./service"
+import WishlistProduct from "./wishlistProduct"
 
 export {
     Advertisement,
@@ -21,6 +22,7 @@ export {
     Header,
     Line,
     NavigationSlide,
-    Service
+    Service,
+    WishlistProduct,
 }
 

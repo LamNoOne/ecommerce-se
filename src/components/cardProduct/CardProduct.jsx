@@ -3,16 +3,19 @@ import ReactStars from "react-stars"
 import PropsType from "prop-types"
 import { Link } from "react-router-dom"
 import { HeartIcon, ViewIcon } from "../icon"
+import { useNavigate, useLocation } from "react-router-dom"
 
 const CardProduct = (props) => {
+    const navigate = useNavigate()
+    let location = useLocation()
     const { _id, title, price, old_price, quantity, sale, image, totalRating } = props
     return (
-        <section className="flex flex-col relative">
-            <Link to={`#${_id}`} className="product-img-container pb-[30px] pt-[20px] px-[35px] bg-[#F5F5F5]">
+        <section className="product-item flex flex-col relative border border-[#F5F5F5] rounded overflow-hidden">
+            <div onClick={() => navigate(location.pathname === '/' ? `product/${_id}` : `${_id}`)} className="product-img-container pb-[30px] pt-[20px] px-[35px] bg-[#F7F7F7]">
                 <div className="product-img">
                     <img src={image} alt="product" className="w-full object-contain" />
                 </div>
-            </Link>
+            </div>
             <div className="absolute top-3 left-3 w-auto h-auto">
                 <div className="bg-[#DB4444] py-1 px-3 flex items-center rounded">
                     <span className="text-xs text-center leading-[18px] font-[Poppins] text-[#FAFAFA]">{`-${sale}%`}</span>
@@ -28,7 +31,7 @@ const CardProduct = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="product-info pt-4">
+            <div className="product-info pt-4 ps-[10px]">
                 <div className="flex flex-col gap-2 items-start">
                     <h1 className="text-base font-medium font-[Poppins] text-black">{title}</h1>
                     <div className="flex items-center justify-start gap-3">

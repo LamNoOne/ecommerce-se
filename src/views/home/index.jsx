@@ -41,7 +41,7 @@ const Home = () => {
                     items={products}
                     titleCategory="Today's"
                     titleEvent="Flash Sales"
-                    numberOfCard={4}
+                    numberOfCard={5}
                 />
             </section>
             <section>

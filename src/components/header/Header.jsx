@@ -3,6 +3,7 @@ import { Line } from "~/components"
 import { CartIcon, SearchIcon, WishlistIcon } from "~/components/icon"
 import style from "~/style"
 import UserIcon from "../icon/UserIcon"
+import AccountDropdown from "../accountDropdown"
 
 const Header = (props) => {
     const { title } = props
@@ -29,9 +30,9 @@ const Header = (props) => {
             <div
                 className={`${style.boxWidth} h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4`}
             >
-                <div className="flex-1 exclusive text-black font-['Inter'] text-2xl font-bold leading-6">
+                <Link to="/" className="flex-1 exclusive text-black font-['Inter'] text-2xl font-bold leading-6">
                     Exclusive
-                </div>
+                </Link>
                 <div className="flex-2 h-[24px] me-[148px]">
                     <ul className="header-menu w-[100%] flex justify-between items-center gap-12">
                         <li>
@@ -78,17 +79,21 @@ const Header = (props) => {
                             <SearchIcon />
                         </button>
                     </form>
-                    <Link to="/#" className="ms-6 flex items-center">
+                    {/* Get wishlist state, after that, check if state is Array, get Array.length,
+                    create a div width:16px height: 16px rounded-full, pass a length to it*/}
+                    <Link to="/user/wishlist" className="ms-6 flex items-center">
                         <WishlistIcon />
                     </Link>
-                    <Link to="/#" className="ms-6 flex items-center">
+                    {/* Get order state, after that, check if state is Array, get Array.length,
+                    create a div width:16px height: 16px rounded-full, pass a length to it*/}
+                    <Link to="/user/cart" className="ms-6 flex items-center">
                         <CartIcon />
                     </Link>
                     {/* Check if user login or not, then, switch icon as well as its function */}
-                    <Link to="/login" className="ms-6 flex items-center">
+                    {/* <Link to="/login" className="ms-6 flex items-center">
                         <UserIcon />
-                    </Link>
-                    {/* <div className="ms-6 mt-1"><AccountDropdown /></div> */}
+                    </Link> */}
+                    <div className="ms-6 mt-1"><AccountDropdown /></div>
                 </div>
             </div>
             <Line style={style.lineStyleMain} />
