@@ -1,11 +1,12 @@
 import { Menu, Transition } from "@headlessui/react"
 import { Fragment } from "react"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 import LogoutIcon from "../icon/LogoutIcon"
 import OrderIcon from "../icon/OrderIcon"
 import ReviewIcon from "../icon/ReviewIcon"
 import UserLightIcon from "../icon/UserLightIcon"
 import UserLoginIcon from "../icon/UserLoginIcon"
+import { Popup } from "~/components/"
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ")
@@ -29,22 +30,22 @@ export default function AccountDropdown() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-[75px] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-0 mt-2 w-56 origin-top-right rounded-md bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-[75px] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-5">
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to='/member'
+                                    to="/member"
                                     className={classNames(
                                         active
-                                            ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
+                                            ? "bg-[rgba(0,0,0,0.5)] text-gray-300"
                                             : "text-gray-100",
                                         "block px-4 py-2 text-sm"
                                     )}
                                 >
                                     <div className="flex items-center">
                                         <div className="me-2 ms-0">
-                                        <UserLightIcon />
+                                            <UserLightIcon />
                                         </div>
                                         <span>Account settings</span>
                                     </div>
@@ -54,18 +55,17 @@ export default function AccountDropdown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to='/member/order'
+                                    to="/member/order"
                                     className={classNames(
                                         active
-                                            ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
+                                            ? "bg-[rgba(0,0,0,0.5)] text-gray-300"
                                             : "text-gray-100",
                                         "block px-4 py-2 text-sm"
                                     )}
                                 >
                                     <div className="flex items-center">
                                         <div className="me-4 ms-1">
-
-                                        <OrderIcon />
+                                            <OrderIcon />
                                         </div>
                                         <span>My Order</span>
                                     </div>
@@ -75,42 +75,45 @@ export default function AccountDropdown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to='/member/support'
+                                    to="/member/support"
                                     className={classNames(
                                         active
-                                            ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
+                                            ? "bg-[rgba(0,0,0,0.5)] text-gray-300"
                                             : "text-gray-100",
                                         "block px-4 py-2 text-sm"
                                     )}
                                 >
                                     <div className="flex items-center">
-                                        <div className="me-4 ms-0"><ReviewIcon /></div>
+                                        <div className="me-4 ms-0">
+                                            <ReviewIcon />
+                                        </div>
                                         <span>Support</span>
                                     </div>
                                 </Link>
                             )}
                         </Menu.Item>
 
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-[rgba(0,0,0,0.3)] text-gray-300"
-                                                : "text-gray-100",
-                                            "block w-full px-4 py-2 text-left text-sm"
-                                        )}
-                                    >
-                                        <div className="flex items-center">
-                                            <div className="me-4 ms-0"><LogoutIcon /></div>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <div
+                                    className={classNames(
+                                        active
+                                            ? "bg-[rgba(0,0,0,0.5)] text-gray-300"
+                                            : "text-gray-100",
+                                        "block px-4 py-2 text-sm"
+                                    )}
+                                >
+                                    <Popup>
+                                        <div className="flex items-center cursor-pointer">
+                                            <div className="me-4 ms-0">
+                                                <LogoutIcon />
+                                            </div>
                                             <span>Logout</span>
                                         </div>
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
+                                    </Popup>
+                                </div>
+                            )}
+                        </Menu.Item>
                     </div>
                 </Menu.Items>
             </Transition>

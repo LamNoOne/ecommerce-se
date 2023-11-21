@@ -13,7 +13,17 @@ import Accessories from "./accessories"
 import PC from "./pc"
 import Tivi from "./tivi"
 import Promotion from "./promotion"
-import { HomeMember, Order } from './member'
+import {
+    HomeMember,
+    Order,
+    SingleOrder,
+    Warranty,
+    Gift,
+    Rank,
+    Account,
+    Support,
+    Feedback,
+} from "./member"
 
 export {
     Home,
@@ -32,5 +42,12 @@ export {
     Tivi,
     Promotion,
     HomeMember,
-    Order
+    Order,
+    SingleOrder,
+    Warranty,
+    Gift,
+    Rank,
+    Account,
+    Support,
+    Feedback,
 }

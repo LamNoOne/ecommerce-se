@@ -10,6 +10,7 @@ import Line from "./line"
 import NavigationSlide from "./navigationSlide"
 import Service from "./service"
 import WishlistProduct from "./wishlistProduct"
+import Popup from "./popup"
 
 export {
     Advertisement,
@@ -24,5 +25,6 @@ export {
     NavigationSlide,
     Service,
     WishlistProduct,
+    Popup
 }
 

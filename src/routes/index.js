@@ -21,7 +21,7 @@
 
 // // Them truong pathChildren la Object, key la path, value la Page, path dang :id hoac /xxx/xxx
 // // Neu isPathChildren, Object entries => mang => map => <Route path="_path" element={<_element />} />
-// // { path: config.routes.login 
+// // { path: config.routes.login
 // // , component: Login,
 // // pathChildren={
 // //   path1: Component1,
@@ -65,9 +65,9 @@
 
 // export { privateRoutes, publicRoutes };
 
-import { useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom"
 
-import { Authentication, DefaultLayout } from '~/layout';
+import { Authentication, DefaultLayout } from "~/layout"
 import {
     Home,
     Login,
@@ -85,106 +85,102 @@ import {
     Promotion,
     PC,
     Accessories,
-    Order
-} from '~/views';
+    Order,
+    SingleOrder,
+    Warranty,
+    Gift,
+    Rank,
+    Account,
+    Support,
+    Feedback,
+} from "~/views"
 
 export default function Router() {
     let element = useRoutes([
         {
             element: <DefaultLayout />,
             children: [
-                { path: "/", element: <Home />},
-                { path: "/laptop", element: <Laptop />},
-                { path: "/studio", element: < Studio/>},
-                { path: "/smartphone", element: < SmartPhone/>},
-                { path: "/camera", element: < Camera/>},
-                { path: "/accessories", element: < Accessories/>},
-                { path: "/pc", element: < PC/>},
-                { path: "/tivi", element: <Tivi />},
-                { path: "/promotion", element: <Promotion />},
-                { path: "/member", element: <HomeMember />},
-                { path: '/user/wishlist', element: <WishList />},
-                { path: '/user/cart', element: <Cart />},
-                { path: '/user/checkout', element: <CheckOut />},
-            ]
+                { path: "/", element: <Home /> },
+                { path: "/laptop", element: <Laptop /> },
+                { path: "/studio", element: <Studio /> },
+                { path: "/smartphone", element: <SmartPhone /> },
+                { path: "/camera", element: <Camera /> },
+                { path: "/accessories", element: <Accessories /> },
+                { path: "/pc", element: <PC /> },
+                { path: "/tivi", element: <Tivi /> },
+                { path: "/promotion", element: <Promotion /> },
+                { path: "/member", element: <HomeMember /> },
+                { path: "/user/wishlist", element: <WishList /> },
+                { path: "/user/cart", element: <Cart /> },
+                { path: "/user/checkout", element: <CheckOut /> },
+            ],
         },
         {
-            path: '/member',
+            path: "/member",
             element: <DefaultLayout />,
             children: [
-                { path: 'order', element: <Order />},
-            ]
+                { path: "order", element: <Order /> },
+                { path: "warranty", element: <Warranty /> },
+                { path: "gift", element: <Gift /> },
+                { path: "rank", element: <Rank /> },
+                { path: "account", element: <Account /> },
+                { path: "support", element: <Support /> },
+                { path: "feedback", element: <Feedback /> },
+                { path: "order/:id", element: <SingleOrder /> },
+            ],
         },
         {
-            path: '/product',
+            path: "/product",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/smartphone',
+            path: "/smartphone",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/laptop',
+            path: "/laptop",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/studio',
+            path: "/studio",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/camera',
+            path: "/camera",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/accessories',
+            path: "/accessories",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/pc',
+            path: "/pc",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/tivi',
+            path: "/tivi",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
-            path: '/promotion',
+            path: "/promotion",
             element: <DefaultLayout />,
-            children: [
-                { path: ':id', element: <SingleProduct />},
-            ]
+            children: [{ path: ":id", element: <SingleProduct /> }],
         },
         {
             element: <Authentication />,
             children: [
-                { path: '/login', element: <Login />},
-                { path: '/signup', element: <Signup />},
-            ]
-        }
+                { path: "/login", element: <Login /> },
+                { path: "/signup", element: <Signup /> },
+            ],
+        },
     ])
     return element
 }

@@ -10,6 +10,7 @@ import { MdSupportAgent } from "react-icons/md"
 import { SlNote } from "react-icons/sl"
 import { TbLogout } from "react-icons/tb"
 import { useNavigate } from "react-router-dom"
+import { Popup } from "~/components"
 
 const SideBar = () => {
     const navigate = useNavigate()
@@ -23,7 +24,6 @@ const SideBar = () => {
         account: ["Account", FaUser],
         support: ["Support", MdSupportAgent],
         feedback: ["Feedback", SlNote],
-        logout: ["Log Out", TbLogout],
     }
     const [pathName, setPathName] = useState(null)
 
@@ -38,13 +38,16 @@ const SideBar = () => {
     }, [location])
 
     const handleClickSideBar = (link) => {
-        String(link) ==='member' ? navigate('/member') : navigate(`/member/${link}`)
+        String(link) === "member"
+            ? navigate("/member")
+            : navigate(`/member/${link}`)
     }
 
     return (
         <div className="flex flex-col gap-2 items-start p-4 bg-[#f6fbfc] rounded-lg w-full">
             {Object.entries(sidebar).map(([link, [title, Icon]]) => (
-                <div onClick={() => handleClickSideBar(link)}
+                <div
+                    onClick={() => handleClickSideBar(link)}
                     key={link}
                     // onClick={() => {
                     //     if(String(pathName) !== String(`/${link}`)) {
@@ -76,6 +79,16 @@ const SideBar = () => {
                     </h3>
                 </div>
             ))}
+
+            <Popup>
+                <button
+                    className="logout-button w-full flex items-center justify-start p-2 
+                border-[2px] rounded-lg gap-4 cursor-pointer hover:border-[#ff0000] hover:bg-[#ff0000] hover:text-white"
+                >
+                    <TbLogout size={24} />
+                    <h3 className="text-sm">Logout</h3>
+                </button>
+            </Popup>
         </div>
     )
 }

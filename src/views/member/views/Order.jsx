@@ -2,10 +2,29 @@ import React from "react"
 import SideBar from "../components/SideBar"
 import images from "~/assets/images"
 import { useState } from "react"
-import Calendar from "react-calendar"
+import CalendarDropDown from "../components/CalendarDropDown"
+import OrderedProduct from "../components/OrderedProduct"
+
+// Try import data
+import { data } from '../data/data'
 
 const Order = () => {
-    const [date, setDate] = useState(new Date())
+    // useSelector to get the state => display ordered items
+    const [active, setActive] = useState('')
+    const filterOrder = {
+        getAll: 'All Order',
+        waitForComfirm: 'Wait For Comfirm',
+        confirmOrder: 'Confirm Order',
+        transporting: 'Transporting',
+        canceled: 'Canceled'
+    }
+
+    const handleOnClickFilter = (key, title) => {
+        // set active,
+        // dispatch action to get new state
+        setActive(title)
+    } 
+
     return (
         <section className="my-4 flex">
             <div className="min-w-[260px]">
@@ -36,15 +55,23 @@ const Order = () => {
                         <p className="text-xs">Total Acumulation</p>
                     </div>
                 </div>
-                <div className="app">
-                    <h1 className="text-center">React Calendar</h1>
-                    <div className="calendar-container">
-                        <Calendar onChange={setDate} value={date} />
-                    </div>
-                    <p className="text-center">
-                        <span className="bold">Selected Date:</span>{" "}
-                        {date.toDateString()}
-                    </p>
+
+                <div className=""><CalendarDropDown /></div>
+                <div className="flex items-center justify-around">
+                    {Object.entries(filterOrder).map(([key, title]) => (
+                            <button 
+                                key={key}  
+                                className={`flex items-center justify-center px-4 py-2 border rounded ${active === title ? 'bg-[#ff0000]' : ''}`}
+                                onClick={() => handleOnClickFilter(key, title)}
+                            >
+                                <span className={`text-base ${active === title ? 'text-white' : ''}`}>{title}</span>
+                            </button>
+                    ))}
+                </div>
+                <div className="flex flex-col gap-4">
+                    {data.map(item => (
+                        <OrderedProduct {...item}/>
+                    ))}
                 </div>
             </div>
         </section>
