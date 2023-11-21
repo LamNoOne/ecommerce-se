@@ -16,8 +16,10 @@ const Account = () => {
         inputRef.current.click()
     }
     const [name, setName] = useState("Henry William")
-    const [gender, setGender] = useState("Male")
+    const [gender, setGender] = useState("male")
     const [selectedFile, setSelectedFile] = useState(null)
+
+    const canSave = Boolean(name) && Boolean(gender) && Boolean(selectedFile)
 
     const handleChangeName = (e) => {
         setName(e.target.value)
@@ -32,7 +34,7 @@ const Account = () => {
         setSelectedFile(e.target.files[0])
     }
 
-    const fileUploadHandler = (e) => {
+    const submitHandler = (e) => {
         const formData = new FormData()
         formData.append("file", selectedFile)
         formData.append("upload_preset", "a5ymyhyp")
@@ -42,8 +44,10 @@ const Account = () => {
                 "https://api.cloudinary.com/v1_1/dmnzkqysq/image/upload",
                 formData
             )
-            .then((response) => {
-                console.log(response)
+            .then((response) => response?.data?.url)
+            .then((url) => {
+                // dispatch to update user's info
+                console.log(url, name, gender)
             })
     }
 
@@ -52,9 +56,9 @@ const Account = () => {
             <div className="min-w-[260px]">
                 <SideBar />
             </div>
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col pb-8 px-8 w-full">
                 <div className="flex flex-row w-full">
-                    <div className="pb-8 px-8 flex flex-1 flex-col">
+                    <div className="flex flex-1 flex-col">
                         <h1 className="text-lg font-medium">
                             Account Information
                         </h1>
@@ -162,8 +166,9 @@ const Account = () => {
                 <div className="button-submit">
                     <button
                         type="submit"
-                        className="px-4 py-2 border mt-2"
-                        onClick={fileUploadHandler}
+                        disabled={!canSave}
+                        className="px-4 py-2 border mt-2 bg-[#ff0000] rounded text-white hover:bg-orange-500 cursor-pointer disabled:cursor-none"
+                        onClick={submitHandler}
                     >
                         Save
                     </button>
