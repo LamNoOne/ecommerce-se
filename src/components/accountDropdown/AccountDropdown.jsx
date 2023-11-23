@@ -14,7 +14,7 @@ function classNames(...classes) {
 
 export default function AccountDropdown() {
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left z-0">
             <div>
                 <Menu.Button className="inline-flex w-full justify-center rounded-full bg-transparent text-sm font-semibold text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                     <UserLoginIcon />
@@ -30,7 +30,7 @@ export default function AccountDropdown() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 z-0 mt-2 w-56 origin-top-right rounded-md bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-[75px] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-0 mt-4 w-56 origin-top-right rounded-md bg-[rgba(0,0,0,0.7)] backdrop-filter backdrop-blur-[75px] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-5">
                         <Menu.Item>
                             {({ active }) => (

@@ -35,8 +35,8 @@ const Home = () => {
             <section>
                 <CategorySlide
                     CategoryModule={CardProduct}
-                    Line={Line}
-                    Button={Button}
+                    // Line={Line}
+                    // Button={Button}
                     Timer={Timer}
                     items={products}
                     titleCategory="Today's"
@@ -47,7 +47,7 @@ const Home = () => {
             <section>
                 <CategorySlide
                     CategoryModule={CategoryButton}
-                    Line={Line}
+                    // Line={Line}
                     items={categoryBrowse}
                     titleCategory="Category"
                     titleEvent="Browse By Category"

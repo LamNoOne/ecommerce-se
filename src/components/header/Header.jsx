@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Line } from "~/components"
+import { Line, Search } from "~/components"
 import { CartIcon, SearchIcon, WishlistIcon } from "~/components/icon"
 import style from "~/style"
 import UserIcon from "../icon/UserIcon"
@@ -31,7 +31,7 @@ const Header = (props) => {
                 className={`${style.boxWidth} h-[38px] flex justify-between items-center m-auto mt-[40px] mb-4`}
             >
                 <Link to="/" className="flex-1 exclusive text-black font-['Inter'] text-2xl font-bold leading-6">
-                    Exclusive
+                    SE SHOP
                 </Link>
                 <div className="flex-2 h-[24px] me-[148px]">
                     <ul className="header-menu w-[100%] flex justify-between items-center gap-12">
@@ -65,20 +65,7 @@ const Header = (props) => {
                     </ul>
                 </div>
                 <div className="flex-1 h-[100%] flex items-center">
-                    <form
-                        className="search-form-header h-[100%] w-[243px] flex ps-5 pe-3 py-[7px] justify-center items-center rounded gap-2"
-                        action=""
-                    >
-                        <input
-                            type="text"
-                            placeholder="What are you looking for?"
-                            name="search"
-                            className="flex-1 h-[100%] bg-transparent focus:outline-none text-xs"
-                        />
-                        <button type="submit" className="flex items-center">
-                            <SearchIcon />
-                        </button>
-                    </form>
+                    <Search />
                     {/* Get wishlist state, after that, check if state is Array, get Array.length,
                     create a div width:16px height: 16px rounded-full, pass a length to it*/}
                     <Link to="/user/wishlist" className="ms-6 flex items-center">

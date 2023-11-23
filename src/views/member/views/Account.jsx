@@ -16,16 +16,21 @@ const Account = () => {
         inputRef.current.click()
     }
     const [name, setName] = useState("Henry William")
+    const [address, setAddress] = useState('')
     const [gender, setGender] = useState("male")
     const [selectedFile, setSelectedFile] = useState(null)
 
-    const canSave = Boolean(name) && Boolean(gender) && Boolean(selectedFile)
+    const canSave = Boolean(name) && Boolean(gender) && Boolean(address)
 
     const handleChangeName = (e) => {
         setName(e.target.value)
     }
     const handleChangeGender = (e) => {
         setGender(e.target.value)
+    }
+
+    const handleChangeAddress = (e) => {
+        setAddress(e.target.value)
     }
 
     const isChecked = (value) => gender === value
@@ -38,8 +43,8 @@ const Account = () => {
         const formData = new FormData()
         formData.append("file", selectedFile)
         formData.append("upload_preset", "a5ymyhyp")
-
-        axios
+        if(selectedFile) {
+            axios
             .post(
                 "https://api.cloudinary.com/v1_1/dmnzkqysq/image/upload",
                 formData
@@ -47,8 +52,11 @@ const Account = () => {
             .then((response) => response?.data?.url)
             .then((url) => {
                 // dispatch to update user's info
-                console.log(url, name, gender)
+                console.log(url, name, address, gender)
             })
+        } else {
+            console.log(name, address, gender)
+        }
     }
 
     return (
@@ -70,13 +78,22 @@ const Account = () => {
                                 <h1 className="text-sm">Login name:</h1>
                                 <p className="text-sm">henrywilliam</p>
                             </div>
-                            <div className="flex flex-row items-center gap-6 px-4 py-2">
+                            <div className="flex flex-row items-center justify-between me-8 gap-6 px-4 py-2">
                                 <h1 className="text-sm">Name:</h1>
                                 <input
-                                    className="text-sm w-full p-2 outline-none border border-[#ccc]"
+                                    className="w-[450px] text-sm p-2 outline-none border border-[#ccc]"
                                     type="text"
                                     value={name}
                                     onChange={handleChangeName}
+                                />
+                            </div>
+                            <div className="flex flex-row items-center justify-between me-8 gap-6 px-4 py-2">
+                                <h1 className="text-sm">Address:</h1>
+                                <input
+                                    className="w-[450px] text-sm p-2 outline-none border border-[#ccc]"
+                                    type="text"
+                                    value={address}
+                                    onChange={handleChangeAddress}
                                 />
                             </div>
                             <div className="flex flex-row items-center gap-6 px-4 py-2">

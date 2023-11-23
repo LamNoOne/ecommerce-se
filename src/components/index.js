@@ -11,6 +11,7 @@ import NavigationSlide from "./navigationSlide"
 import Service from "./service"
 import WishlistProduct from "./wishlistProduct"
 import Popup from "./popup"
+import Search from "./search"
 
 export {
     Advertisement,
@@ -25,6 +26,6 @@ export {
     NavigationSlide,
     Service,
     WishlistProduct,
-    Popup
+    Popup,
+    Search,
 }
-
