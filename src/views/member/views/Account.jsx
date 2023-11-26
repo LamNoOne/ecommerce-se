@@ -42,7 +42,7 @@ const Account = () => {
     const submitHandler = (e) => {
         const formData = new FormData()
         formData.append("file", selectedFile)
-        formData.append("upload_preset", "a5ymyhyp")
+        formData.append("upload_preset", "add_key")
         if(selectedFile) {
             axios
             .post(
