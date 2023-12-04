@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `npm install`
 
 ## Available Scripts
-
+Before you run, change name of "service.jsx" to "Service.jsx" at components/service.
 In the project directory, you can run:
 
 ### `npm start`
